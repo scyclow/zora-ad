@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  line-height: 8.8pt;
+}
+
+
+html, body {
+  width: 210mm;
+  height: 297mm;
+}
+
+body {
+  margin: 3.175mm;
+}
+
+main {
+  border: 2pt solid;
+  padding: 2pt;
+  /*padding: 4pt;*/
+  width: calc(210mm - 3.175mm*2);
+  height: calc(297mm - 3.175mm*2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+h2 {
+  font-size: 14pt;
+  background: #000;
+  color: #fff;
+  padding: 0.25em;
+  text-align: center;
+  /*margin-bottom: 0.25em;*/
+  text-transform: uppercase;
+}
+
+h3 {
+  text-decoration: underline;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+  text-align: center;
+  padding: 2pt;
+}
+
+img {
+  max-width: 100%;
+}
+
+.ad {
+  font-size: 7pt;
+  padding: 0.5em;
+  text-align: justify;
+  overflow-wrap: anywhere;
+
+}
+
+.ad-dark {
+  background: #ddd;
+  margin: 3.5pt;
+}
+
+.ad-section {
+  margin-top: 3pt;
+}
+
+.large {
+  font-size: 9pt;
+  text-align: center;
+  font-weight: 800;
+  margin: 2pt 0;
+}
+
+.border {
+  border-bottom: 1pt solid;
+  margin: 1pt 3.5pt;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bordered-ad {
+  border: 1pt solid;
+  padding: 2pt;
+  margin: 2pt;
+  margin-top: 0;
+}
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: calc(210mm - 3.175mm);
+    height: calc(297mm - 3.175mm);
+  }
+  .main-page {
+    margin: 3.175mm;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+}
